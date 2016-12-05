@@ -1,0 +1,26 @@
+<section class="panel">
+        <header class="panel-heading">
+                Add New Book
+        </header>
+        <div class="panel-body table-responsive">
+            <%= form_for(:book,:url=>{:action=>'create'}) do |f| %>
+                <div class="form-group">
+                    <%= f.label :title %>
+                    <%= f.text_field :title, class: 'form-control', placeholder: "Enter Title Here" %>
+                </div>
+
+                <div class="form-group">
+                    <%= f.label :year %>
+                    <%= f.text_field :year, class: 'form-control', placeholder: "Enter Year Here" %>
+                </div>
+
+                
+                <div class="form-group">
+                    <%= f.label :Picture %>
+                    <%= f.file_field :picture %>
+                </div>
+               
+                <%= f.submit "Save", class: 'button' %>
+            <% end %>
+        </div>
+</section>

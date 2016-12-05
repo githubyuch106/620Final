@@ -1,0 +1,10 @@
+<%= form_tag(:action=>'checkout_post') do %>
+
+"Are you sure you want to checkout this book?"
+<br/>
+
+<%= hidden_field_tag :book_name, @book_name %>
+
+<%= submit_tag("Yes") %>
+
+<% end %>
